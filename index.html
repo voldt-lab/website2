@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>&nbsp;&nbsp;voldt</title>
+  <!-- Inter font from Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="src/logo_favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="src/logo.png" alt="voldt logo">
+      </a>
+      <nav class="site-nav">
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">Story</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="story">
+    <div class="container hero-copy">
+      <h1>Design for You</h1>
+      <p>voldt aims to create meaningful and sustainable designs that will live with you no matter where you are.</p>
+      <a href="products.html" class="btn primary">Our Products →</a>
+    </div>
+    <img src="src/a.jpg" alt="Hero image" class="hero-img">
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="container">
+      <h2>Products</h2>
+      <div class="product-grid">
+        <div class="card">
+          <img src="src/d.jpg" alt="Lamp B" class="product-img">
+          <h3>Detroit Table Lamp B</h3>
+          <p>Designed and manufactured with recycled materials and sustainable processes.</p>
+        </div>
+        <div class="card">
+          <img src="src/e_sq.jpg" alt="Coat Stand" class="product-img">
+          <h3>PolyFrame Coat Stand</h3>
+          <p>Solid black walnut with 3D-printed nylon and brass details.</p>
+        </div>
+        <div class="card">
+          <img src="src/o_sq.jpg" alt="Desk Light" class="product-img">
+          <h3>PolyFrame Table Light</h3>
+          <p>Algorithmic furniture system inspired by architectural forms.</p>
+        </div>
+      </div>
+      <a href="products.html" class="btn">See All Products</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container services-grid">
+      <div class="services-text">
+        <h2>Services</h2>
+        <h4>Design</h4>
+        <p>Trained architects to tease out the best from your mental real estate.</p>
+        <h4>Advanced Modeling</h4>
+        <p>Best in class industrial modeling techniques realize your wildest imagination.</p>
+        <h4>Custom AM</h4>
+        <p>Materialize your ideas with our 3D-printing capabilities.</p>
+        <div class="btn-row">
+          <a href="services.html#contact" class="btn primary">Contact Us</a>
+          <a href="about.html" class="btn">Our Story</a>
+        </div>
+      </div>
+      <div class="services-img">
+        <img src="src/j.jpg" alt="Services" class="service-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-explore">
+      <h2>Explore More by <strong>voldt</strong></h2>
+      <div class="btn-row">
+        <a href="#" class="btn primary">Contact Us</a>
+        <a href="https://www.instagram.com/voldt_lab/" class="btn">Follow Us</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>voldt ©2025</p>
+      <div class="social">
+        <a href="mailto:info@voldtlab.com" aria-label="Email">
+          <img src="src/email.png" alt="Email icon" width="24" height="24">
+        </a>
+        <a href="https://instagram.com/voldt_lab" target="_blank" aria-label="Instagram">
+          <img src="src/instagram.png" alt="Instagram icon" width="24" height="24">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script>
+  // hero image sizing according to screen
+  const heroImg = document.querySelector('.hero-img');
+  function setHeroHeight() {
+    heroImg.style.height = window.innerHeight/1.33 + 'px';
+  }
+  setHeroHeight();
+  window.addEventListener('resize', setHeroHeight);
+
+</script>
+
+
+</html>
