@@ -42,7 +42,7 @@ body {
   display: inline-block; /* or block, depending on your layout */
 }
 .prod-link:hover .card {
-  outline: 2px solid #dda05e36;    /* pick your color & thickness */
+  outline: 2px solid #dda05e;    /* pick your color & thickness */
   outline-offset: 5px;           /* pushes the outline 5px outside */
 }
 
