@@ -37,13 +37,15 @@ body {
   aspect-ratio: 16 / 9;
 }
 .prod-link {
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
   display: inline-block; /* or block, depending on your layout */
+  border-radius: var(--radius);
 }
 .prod-link:hover .card {
-  outline: 2px solid #dda05e;    /* pick your color & thickness */
-  outline-offset: 5px;           /* pushes the outline 5px outside */
+  outline: 2px solid #dda05e;
+  outline-offset: 5px;
 }
 
 /* BUTTONS */
@@ -171,6 +173,12 @@ img.hero-img {
   aspect-ratio: 1 / 1;
   border-radius: var(--radius);
   margin-bottom: var(--spacing);
+
+  transition: transform 0.5s ease;
+  transform-origin: center bottom;
+}
+.product-img:hover{
+  transform: scale(1.05);
 }
 .card h3 {
   font-size: 1.1rem;
@@ -235,14 +243,6 @@ img.service-img {
   background: var(--clr-light);
   border-top: 1px solid #ddd;
   padding: calc(var(--spacing) * 1.5) 0;
-}
-.footer-explore {
-  text-align: center;
-  margin-bottom: var(--spacing);
-}
-.footer-explore h2 {
-  font-size: 1.6rem;
-  margin-bottom: var(--spacing);
 }
 .footer-bottom {
   display: flex;
