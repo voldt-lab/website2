@@ -19,9 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 const firebaseConfig = {
   apiKey: "AIzaSyD7l1D_6-bupEzU20uJRE2OOREqs0UBHf0",
   authDomain: "voldt-fb.firebaseapp.com",
-  databaseURL: "https://voldt-fb-default-rtdb.firebaseio.com",
   projectId: "voldt-fb",
+  storageBucket: "voldt-fb.firebasestorage.app",
+  messagingSenderId: "903604332756",
+  appId: "1:903604332756:web:4659bee01e72e7e41f3341",
+  measurementId: "G-RXJGX0M7CT"
 };
+
 
 //initialize app and check for access
 const app = initializeApp(firebaseConfig);
