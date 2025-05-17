@@ -56,24 +56,28 @@
   <section class="contact" id="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <form class="contact-form">
+      <form class="contact-form" novalidate>
         <div class="form-row">
           <div>
             <label for="first-name">First name</label>
             <input id="first-name" type="text" placeholder="Jane">
+            <span class="error-message" id="err-first-name"></span>
           </div>
           <div>
             <label for="last-name">Last name</label>
             <input id="last-name" type="text" placeholder="Smitherton">
+            <span class="error-message" id="err-last-name"></span>
           </div>
         </div>
         <div>
           <label for="email">Email address</label>
-          <input id="email" type="email" placeholder="email@janesfakedomain.net">
+          <input id="email" type="email" placeholder="email@somedomain.net">
+          <span class="error-message" id="err-email"></span>
         </div>
         <div>
           <label for="message">Your message</label>
           <textarea id="message" rows="4" placeholder="Enter your question or message"></textarea>
+          <span class="error-message" id="err-message"></span>
         </div>
         <button type="submit" class="btn primary">Submit</button>
       </form>

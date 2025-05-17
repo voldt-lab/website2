@@ -35,9 +35,64 @@ initializeAppCheck(app, {
 });
 const db  = getDatabase(app);
 
+//check form validity
+const form = document.querySelector('.contact-form');
+const fields = [
+  { id: 'first-name', label: 'First name' },
+  { id: 'last-name',  label: 'Last name'  },
+  { id: 'email',      label: 'Email address', type: 'email' },
+  { id: 'message',    label: 'Message' }
+];
+
+function clearErrors() {
+  fields.forEach(f => {
+    const input = document.getElementById(f.id);
+    input.classList.remove('error');
+    document.getElementById(`err-${f.id}`).textContent = '';
+  });
+}
+
+function showError(fieldId, msg) {
+  const input = document.getElementById(fieldId);
+  input.classList.add('error');
+  document.getElementById(`err-${fieldId}`).textContent = msg;
+}
+
+function validateForm() {
+  clearErrors();
+  let valid = true;
+
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    const val = el.value.trim();
+
+    if (!val) {
+      valid = false;
+      showError(f.id, `${f.label} is required.`);
+      return;
+    }
+
+    if (f.type === 'email') {
+      // simple email regex; you can replace with your own
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!re.test(val)) {
+        valid = false;
+        showError(f.id, `Please enter a valid email.`);
+      }
+    }
+  });
+
+  return valid;
+}
+
+
 //writing to firebase
 document.querySelector('.contact-form').addEventListener('submit', async e => {
   e.preventDefault();
+
+  if(!validateForm()){
+    return;
+  }
 
   const data = {
     firstName: document.getElementById('first-name').value,

@@ -303,6 +303,16 @@ img.portfolio-img {
   border-radius: var(--radius);
   background: none;
 }
+.error-message {
+  display: block;
+  color: rgb(195, 25, 25);
+  font-size: 0.9em;
+  height: 1em;
+  margin-top: 0.2em;
+}
+input.error, textarea.error {
+  border-color: rgb(195, 25, 25);
+}
 
 /* --- CONTACT FORM STYLING --- */
 .contact {
