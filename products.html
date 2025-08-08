@@ -3,24 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>voldt — All Products</title>
+  <title>voldt — Products</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="src/logo_favicon.png" type="image/png">
-  <style>
-    /* Active nav underline */
-    .site-nav a.active { border-bottom: 2px solid #DDA05E; }
-    /* Product‐page category label */
-    .card .category {
-      color: var(--clr-gray);
-      font-size: 0.9rem;
-      margin-top: 0.2rem;
-    }
-  </style>
+
 </head>
 <script type="module" src="script.js"></script>
 <body>
-
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
@@ -35,86 +25,166 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-copy">
-      <h1>Buy Special</h1>
-      <p>Designed and manufactured in Michigan. Contact us for additional specification options or customization, including hardwired options.</p>
-    </div>
-    <img src="src/b.jpg" alt="Hero image" class="hero-img">
+  <!-- TOP INTRO -->
+  <section class="container" style="padding-top: 3rem;">
+    <h1 style="font-size:2.6rem; font-weight:700; margin-bottom:0.5rem;">Uniquely Yours</h1>
+    <p class="section-desc" style="max-width:600px;">
+      Bring home a piece of small batch product that carries all the signatures of custom made.
+    </p>
   </section>
 
-  <!-- ALL PRODUCTS GRID -->
-  <section class="products" id="prod-list">
-    <div class="container">
-      <h2>All Products</h2>
-      <div class="product-grid">
-        <a href="https://voldt-store.square.site/product/detroit-table-lamp/78" class="prod-link">
-          <div class="card">
-            <img src="src/d.jpg" alt="Lamp B" class="product-img">
-            <h3>Detroit Table Lamp B</h3>
-            <p class="category">Lighting</p>
+  <!-- POLYFRAMES SECTION -->
+  <section class="container">
+    <div class="section-heading">PolyFrames</div>
+    <div class="section-desc" style="max-width:650px;">
+      Algorithmic furniture and home decor system blending advanced digital technologies with handcrafted techniques.
+    </div>
+    <div class="product-grid">
+      <!-- PolyFrame Table Lamp -->
+      <div class="card">
+        <a href="..." class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/o_sq.jpg" alt="PolyFrame Table Lamp" class="product-img">
           </div>
+          <h3>Desk Lamp</h3>
         </a>
-        <a href="https://voldt-store.square.site/product/polyframe-coat-stand/80" class="prod-link">
-          <div class="card">
-            <img src="src/e_sq.jpg" alt="Coat Stand" class="product-img">
-            <h3>PolyFrame Coat Stand</h3>
-            <p class="category">Home</p>
-          </div>
-        </a>
-        <a href="https://voldt-store.square.site/product/capital-e/49" class="prod-link">
-          <div class="card">
-            <img src="src/n.jpg" alt="Capital" class="product-img">
-            <h3>Capital Lamps</h3>
-            <p class="category">Lighting</p>
-          </div>
-        </a>
-        <a href="https://voldt-store.square.site/product/bluminaire-w-6-legs-70-/76" class="prod-link">
-          <div class="card">
-            <img src="src/r.jpg" alt="Bloom" class="product-img">
-            <h3>The Bloominaire</h3>
-            <p class="category">Lighting</p>
-          </div>
-        </a>
-        <a href="https://voldt-store.square.site/product/polyframe-desk-light/79" class="prod-link">
-          <div class="card">
-            <img src="src/o_sq.jpg" alt="Desk Light" class="product-img">
-            <h3>PolyFrame Table Light</h3>
-            <p class="category">Lighting</p>
-          </div>
-        </a>
+        <div class="price">$349</div>
+      </div>
+      <!-- PolyFrame Floor Lamp -->
+      <div class="card">
         <a href="https://voldt-store.square.site/product/polyframe-floor-light/81" class="prod-link">
-          <div class="card">
-            <img src="src/p_sq.jpg" alt="Floor Lamp" class="product-img">
-            <h3>PolyFrame Floor Lamp</h3>
-            <p class="category">Lighting</p>
+          <div class="product-img-frame">
+            <img src="src/p_sq.jpg" alt="PolyFrame Floor Lamp" class="product-img">
           </div>
+          <h3>Floor Lamp</h3>
         </a>
+        <div class="price">$899</div>
+      </div>
+      <!-- PolyFrame Coat Stand -->
+      <div class="card">
+        <a href="https://voldt-store.square.site/product/polyframe-coat-stand/80" class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/e_sq.jpg" alt="PolyFrame Coat Stand" class="product-img">
+          </div>
+          <h3>Coat Stand</h3>
+        </a>
+        <div class="price">$499</div>
+      </div>
+      <!-- PolyFrame Table Light (full-width card, can be adjusted as needed) -->
+      <div class="card" style="grid-column: span 2;">
         <a href="https://voldt-store.square.site/product/polyframe-table/82" class="prod-link">
-          <div class="card">
-            <img src="src/f_sq.jpg" alt="Table" class="product-img">
-            <h3>PolyFrame Coffee Table</h3>
-            <p class="category">Home</p>
+          <div class="product-img-frame">
+            <img src="src/f_sq.jpg" alt="PolyFrame Table Light" class="product-img">
           </div>
+          <h3>Coffee Table</h3>
         </a>
-        <a href="https://voldt-store.square.site/product/voldtchess/70" class="prod-link">
-          <div class="card">
-            <img src="src/q.jpg" alt="Chess" class="product-img">
-            <h3>Checkmates</h3>
-            <p class="category">Games</p>
+        <div class="category">Furniture</div>
+      </div>
+      <!-- Contact Us Card -->
+      <div class="contact-card reformatted-contact-card">
+        <div class="contact-card-inner">
+          <div class="contact-card-message">
+            Custom furniture designs<br>
+            using our PolyFrame system
           </div>
-        </a>
-        <a href="https://voldt-store.square.site/product/detroit-table-lamp/78" class="prod-link">
-          <div class="card">
-            <img src="src/c.jpg" alt="Lamp A" class="product-img">
-            <h3>Detroit Table Lamp A</h3>
-            <p class="category">Lighting</p>
-          </div>
-        </a>
+          <a href="services.html#contact" class="btn primary">Contact Us</a>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- DETROIT LIGHTS SECTION -->
+  <section class="container" style="margin-top:3rem;">
+    <div class="section-heading">Detroit Lights</div>
+    <div class="section-desc" style="max-width:700px;">
+      Suspended wheel design inspired by the Motor City with expressive textures drawing from its historic Art Deco buildings. Designed and made in Michigan with recycled materials.
+    </div>
+    <div class="product-grid">
+      <!-- Detroit Table Lamp A -->
+      <div class="card">
+        <a href="https://voldt-store.square.site/product/detroit-table-lamp/78" class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/c.jpg" alt="Detroit Table Lamp A" class="product-img">
+          </div>
+          <h3>Detroit Table Lamp A</h3>
+        </a>
+        <div class="category">Home</div>
+      </div>
+      <!-- Detroit Table B -->
+      <div class="card">
+        <a href="https://voldt-store.square.site/product/detroit-table-lamp/78" class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/d.jpg" alt="Detroit Table Lamp B" class="product-img">
+          </div>
+          <h3>Detroit Table Lamp B</h3>
+        </a>
+        <div class="category">Lights</div>
+      </div>
+      <!-- Detroit Pendant A -->
+      <div class="card">
+        <a href="#" class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/t.jpg" alt="Detroit Pendant A" class="product-img">
+          </div>
+          <h3>Detroit Pendant A</h3>
+        </a>
+        <div class="category">Home</div>
+      </div>
+      <!-- Detroit pendant B -->
+      <div class="card">
+        <a href="#" class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/s.jpg" alt="Detroit Pendant B" class="product-img">
+          </div>
+          <h3>Detroit Pendant B</h3>
+        </a>
+        <div class="category">Home</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Explore More -->
+  <section class="container" style="margin-top:3rem;">
+    <div class="section-heading">Explore More</div>
+    <div class="section-desc" style="max-width:700px;">
+      Unique product for every special occasion
+    </div>
+    <div class="product-grid">
+      <!-- Detroit Pendant A -->
+      <div class="card">
+        <a href="https://voldt-store.square.site/product/voldtchess/70" class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/q.jpg" alt="Chess" class="product-img">
+          </div>
+          <h3>Chess Set</h3>
+        </a>
+        <div class="category">Home</div>
+      </div>
+      <!-- Detroit Pendant A - Large -->
+      <div class="card">
+        <a href="https://voldt-store.square.site/product/capital-e/49" class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/n.jpg" alt="Capitals" class="product-img">
+          </div>
+          <h3>Capitals Lights</h3>
+        </a>
+        <div class="category">Lights</div>
+      </div>
+      <!-- Detroit Pendant B -->
+      <div class="card">
+        <a href="#" class="prod-link">
+          <div class="product-img-frame">
+            <img src="src/r.jpg" alt="Bloom" class="product-img">
+          </div>
+          <h3>Bloominaire</h3>
+        </a>
+        <div class="category">Lights</div>
+      </div>
+      
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -130,6 +200,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>

@@ -48,6 +48,28 @@ body {
   outline-offset: 5px;
 }
 
+.site-footer {
+  background: var(--clr-light);
+  border-top: 1px solid #ddd;
+  padding: calc(var(--spacing) * 1.5) 0;
+}
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--clr-gray);
+  font-size: 0.9rem;
+}
+.footer-bottom p {
+  margin: 0;
+}
+.social a {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
 /* BUTTONS */
 .btn {
   display: inline-block;
@@ -150,55 +172,7 @@ img.hero-img {
   background: none;
 }
 
-/* PRODUCTS */
-.products {
-  padding: calc(var(--spacing) * 5) 0;
-}
-.products h2 {
-  font-size: 2rem;
-  margin-bottom: var(--spacing);
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--spacing);
-  margin-bottom: var(--spacing);
-}
-.card {
-  text-align: left;
-}
-.product-img {
-  background-color: #efefef;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: var(--radius);
-  margin-bottom: var(--spacing);
-
-  transition: transform 0.5s ease;
-  transform-origin: center bottom;
-}
-.product-img:hover{
-  transform: scale(1.05);
-}
-.card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
-}
-.card p {
-  color: var(--clr-gray);
-  font-size: 0.95rem;
-}
-img.product-img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: bottom;
-  border-radius: var(--radius);
-  background: none;
-}
-
-/* SERVICES */
+/* home-SERVICES section */
 .services{
   padding: calc(var(--spacing) * 3) 0;
 }
@@ -238,29 +212,6 @@ img.service-img {
   background: none;
 }
 
-/* FOOTER */
-.site-footer {
-  background: var(--clr-light);
-  border-top: 1px solid #ddd;
-  padding: calc(var(--spacing) * 1.5) 0;
-}
-.footer-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  color: var(--clr-gray);
-  font-size: 0.9rem;
-}
-.footer-bottom p {
-  margin: 0;
-}
-.social a {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .services-grid {
@@ -269,49 +220,194 @@ img.service-img {
 }
 
 
-/* --- SERVICES DETAIL GRID & PORTFOLIO --- */
-.services-detail-grid {
-  display: flex;
-  flex-direction: column;
-}
-.services-detail-text {
-  max-width: 700px;
-  margin-left: auto;
-  line-height: 1.8;
-  text-align: right;
+/* PRODUCTS */
+.products {
   padding: calc(var(--spacing) * 5) 0;
 }
-.services-portfolio {
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing);
+}
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--spacing);
-  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
 }
-/*was for placeholder boxes*/
-.portfolio-img {
-  background-color: #efefef;
-  aspect-ratio: 16 / 9;
-  width: 100%;
+.card {
+  text-align: left;
+}
+.product-img-frame {
   border-radius: var(--radius);
+  overflow: hidden;
+  background: #efefef;
+  aspect-ratio: 1/1;
 }
-img.portfolio-img {
+.product-img {
+  background-color: #efefef;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing);
+
+  transition: transform 0.5s ease;
+  transform-origin: center bottom;
+}
+.product-img:hover{
+  transform: scale(1.05);
+}
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+.card p {
+  color: var(--clr-gray);
+  font-size: 0.95rem;
+}
+img.product-img {
   display: block;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position:0% 90%;
+  object-position: bottom;
   border-radius: var(--radius);
   background: none;
 }
-.error-message {
-  display: block;
-  color: rgb(195, 25, 25);
-  font-size: 0.9em;
-  height: 1em;
-  margin-top: 0.2em;
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 3rem 0 0.5rem 0;
 }
-input.error, textarea.error {
-  border-color: rgb(195, 25, 25);
+.section-desc {
+  color: var(--clr-gray);
+  margin-bottom: 2rem;
+}
+.price {
+  font-size: 0.92rem;
+  color: var(--clr-gray);
+  margin-top: 0.1rem;
+}
+.card .category {
+  color: var(--clr-gray);
+  font-size: 0.92rem;
+  margin-top: 0.1rem;
+}
+.reformatted-contact-card {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.contact-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  min-width: 240px;
+  min-height: 180px;
+}
+
+.contact-card-message {
+  font-size: 1.08rem;
+  line-height: 1.45;
+  color: #222;
+  margin-bottom: 0;
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: -0.01em;
+}
+
+.reformatted-contact-card .btn {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* --- SERVICES DETAIL GRID & PORTFOLIO --- */
+.services-image-grid {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+.services-image-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+.services-photo, .services-photo-large {
+  background: #efefef;
+  border-radius: var(--radius);
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: none;
+}
+.services-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  background: #efefef;
+  box-shadow: none;
+}
+
+.services-photo-large {
+  width: 100%;
+  /* REMOVE: max-width, aspect-ratio */
+  border-radius: var(--radius);
+  display: block;
+  background: #efefef;
+  box-shadow: none;
+  margin-bottom: 1.5rem;
+  object-fit: contain;  /* For GIF: don't crop */
+}
+
+.services-caption-left {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  max-width: 700px;
+  text-align: left;
+}
+.services-caption-right {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  max-width: 700px;
+  text-align: right;
+  margin-left: auto;
+}
+@media (max-width: 900px) {
+  .services-image-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .services-photo, .services-photo-large {
+    max-width: 100%;
+  }
 }
 
 /* --- CONTACT FORM STYLING --- */
