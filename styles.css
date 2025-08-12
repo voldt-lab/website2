@@ -348,10 +348,10 @@ img.product-img {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
-.services-image-row {
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-start;
+.services-image-row { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem; 
 }
 .services-photo, .services-photo-large {
   background: #efefef;
