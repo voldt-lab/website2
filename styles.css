@@ -27,6 +27,12 @@ body {
   width: 90%;
   max-width: var(--container-max);
   margin: 0 auto;
+  padding-top: 3rem;
+}
+.container h1{
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 .hero-img {
   background-color: #efefef;
@@ -237,6 +243,9 @@ img.service-img {
 .card {
   text-align: left;
 }
+.card#pframetable{
+  grid-column: span 2 ;
+}
 .product-img-frame {
   border-radius: var(--radius);
   overflow: hidden;
@@ -282,6 +291,7 @@ img.product-img {
 .section-desc {
   color: var(--clr-gray);
   margin-bottom: 2rem;
+  max-width: 650px;
 }
 .price {
   font-size: 0.92rem;

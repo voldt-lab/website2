@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-//fire base stuff
+//fire base form stuff------
 const firebaseConfig = {
   apiKey: "AIzaSyD7l1D_6-bupEzU20uJRE2OOREqs0UBHf0",
   authDomain: "voldt-fb.firebaseapp.com",
@@ -112,3 +112,5 @@ document.querySelector('.contact-form').addEventListener('submit', async e => {
     alert('Error submitting form: ' + err.message);
   }
 });
+
+//end firebase-----
