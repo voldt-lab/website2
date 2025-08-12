@@ -62,7 +62,9 @@ function getOrCreateSessionId() {
       page: window.location.pathname || '/',
       referrer: document.referrer || null,
       userAgent: navigator.userAgent,
-      timestamp: Date.now()
+      timeStamp: Date.now(),
+      lang: navigator.language||null,
+      tz: Intl.DateTimeFormat().resolvedOptions().timeZone || null
     };
     await push(ref(db, 'visits'), visitData);
     // --- store last log time ---
