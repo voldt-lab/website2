@@ -393,6 +393,14 @@ img.product-img {
   margin-bottom: 1.5rem;
   object-fit: contain;  /* For GIF: don't crop */
 }
+video.services-photo-large {
+  width: 100%;
+  height: auto;
+}
+#appdemo {
+  scroll-margin-top: 50px;
+}
+
 
 .services-caption-left {
   font-size: 1rem;
